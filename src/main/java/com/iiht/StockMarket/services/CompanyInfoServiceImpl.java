@@ -30,6 +30,14 @@ public class CompanyInfoServiceImpl implements CompanyInfoService {
 		
 		return companyDetailsDTO;
 	};
+	
+	//----------------------------------------------------------------------------
+	public CompanyDetailsDTO updateCompanyInfoById(Long companyCode) {
+		
+		CompanyDetails companyInfo = repository.findCompanyDetailsById(companyCode);
+
+		return StockMarketUtility.convertToCompanyDetailsDTO(companyInfo);
+	};
 	//----------------------------------------------------------------------------
 	public CompanyDetailsDTO deleteCompany(Long companyCode) {
 		
