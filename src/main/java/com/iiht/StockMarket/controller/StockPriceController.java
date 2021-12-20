@@ -43,6 +43,14 @@ public class StockPriceController {
 		return null;		
 		
 	}
+	
+	//-------------------------------------------------------------------------------------------------------------------------------
+	@GetMapping(value = "/updateStockPriceIndex/{companyCode}/{startDate}/{endDate}")										// 5. WORKING
+	public ResponseEntity<StockPriceIndexDTO> displayStockPriceIndex(@PathVariable Long companyCode, @PathVariable Date startDate, @PathVariable Date endDate) {
+		
+		return null;
+	}
+	
 	//-------------------------------------------------------------------------------------------------------------------------------
 	@GetMapping(value = "/getStockByCompanyCode/{companyCode}")															// 4. WORKING
 	public ResponseEntity<List<StockPriceDetailsDTO>> getStockByCompanyCode(@PathVariable Long companyCode) {
@@ -56,6 +64,7 @@ public class StockPriceController {
 		
 		return null;
 	}
+	
 	
 	//===============================================================================================================================
 	//			UTITLITY EXCEPTION HANDLERS - 2
