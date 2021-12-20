@@ -46,7 +46,13 @@ public class StockMarketServiceImpl implements StockMarketService {
 	//----------------------------------------------------------------------------
 	public StockPriceDetailsDTO getStockPriceDetailsDTO(StockPriceDetails stockDetails)	{
 		return null;
-	};	
+	};
+	
+	//----------------------------------------------------------------------------
+	public StockPriceuDetailsupdateDTO updateStockPriceDetails(StockPriceDetailsDTO stockPriceDetailsDTO) {
+		
+		return null;
+	};
 	//----------------------------------------------------------------------------
 	public Double getMaxStockPrice(Long companyCode, LocalDate startDate, LocalDate endDate) {
 		return null;
