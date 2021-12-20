@@ -43,6 +43,15 @@ public class CompanyInfoController {
 			return new ResponseEntity<CompanyDetailsDTO>(companyInfoService.saveCompanyDetails(companyDetailsDTO), HttpStatus.OK);
 	}
 	//-------------------------------------------------------------------------------------------------------------------------------
+	@PostMapping(value="/updateCompany")																					// 3. WORKING
+	public ResponseEntity<CompanyDetailsDTO> addCompanyDetails(@RequestBody CompanyDetailsDTO companyDetailsDTO, BindingResult bindingResult)  {
+
+		if(!bindingResult.hasErrors())
+			throw new InvalidCompanyException("update Company Details!!!");
+		else
+			return new ResponseEntity<CompanyDetailsDTO>(companyInfoService.saveCompanyDetails(companyDetailsDTO), HttpStatus.OK);
+	}
+	//-------------------------------------------------------------------------------------------------------------------------------
 	@DeleteMapping(value = "/deleteCompany/{companyCode}")																// 4. WORKING
 	public ResponseEntity<CompanyDetailsDTO> deleteCompanyDetails(@RequestParam("companyCode") Long companyCode) {
 	
